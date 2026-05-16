@@ -10,11 +10,12 @@
     
     <style>
         :root {
-            --bg-color: #f8fafc;
+            /* Cinematic, Academic Palette */
+            --bg-color: #fcfbfa;       /* Off-white canvas */
             --card-bg: #ffffff;
             --text-main: #334155;
-            --text-headings: #0f172a;
-            --accent: #2563eb;
+            --text-headings: #1e1b4b;  /* Deep Midnight Ink */
+            --accent: #1d4ed8;         /* High-end Technical Blue */
             --accent-light: #eff6ff;
             --warning-border: #f59e0b;
             --warning-bg: #fffbeb;
@@ -37,23 +38,22 @@
 
         /* Responsive Wrapper Layout */
         .page-wrapper {
-            max-width: 1100px; /* Expanded to make space for the sidebar */
+            max-width: 1140px;
             margin: 0 auto;
             padding: 4rem 1.5rem;
             display: grid;
             grid-template-columns: 1fr;
-            gap: 3rem;
+            gap: 3.5rem;
         }
 
-        /* Turns into a beautiful 2-column layout on desktops */
         @media (min-width: 950px) {
             .page-wrapper {
-                grid-template-columns: 1fr 320px;
+                grid-template-columns: 1fr 340px;
             }
         }
 
         .main-content {
-            max-width: 680px; /* Keeps the golden text reading width intact */
+            max-width: 680px; /* Golden reading width */
         }
 
         header {
@@ -149,7 +149,7 @@
         }
 
         .step-list li {
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
         }
 
         .example {
@@ -164,6 +164,28 @@
 
         .example strong {
             color: var(--accent);
+        }
+
+        /* --- RESPONSIVE VIDEO WRAPPER --- */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 16px;
+            margin: 2.5rem 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
 
         /* --- INTERACTIVE POMODORO COMPONENT --- */
@@ -245,7 +267,6 @@
             padding-bottom: 0.5rem;
         }
 
-        /* Graphic Flow for Pomodoro Technique */
         .flow-step {
             display: flex;
             gap: 12px;
@@ -254,9 +275,7 @@
             align-items: flex-start;
         }
 
-        .flow-step:last-child {
-            margin-bottom: 0;
-        }
+        .flow-step:last-child { margin-bottom: 0; }
 
         .flow-num {
             background-color: var(--accent-light);
@@ -272,7 +291,6 @@
             font-size: 0.8rem;
         }
 
-        /* Checklist styling */
         .side-checkbox {
             display: flex;
             align-items: center;
@@ -353,7 +371,7 @@
 
         /* CTA / Comments Section */
         .cta-section {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
             color: #ffffff;
             padding: 2.5rem;
             border-radius: 20px;
@@ -374,8 +392,8 @@
             width: 100%;
             padding: 1rem;
             border-radius: 10px;
-            border: 1px solid #334155;
-            background-color: rgba(30, 41, 59, 0.7);
+            border: 1px solid #4338ca;
+            background-color: rgba(30, 27, 75, 0.6);
             color: #ffffff;
             font-family: inherit;
             resize: vertical;
@@ -414,6 +432,15 @@
                 <p class="intro">
                     Imagine staring at a blinking cursor at 2:00 AM, downing your third energy drink while trying to finish an assignment. This midnight panic is a direct result of unstructured university freedom clashing with heavy academic workloads. In higher education, structural autonomy leaves scheduling completely to the student. This guide equips you with concrete, technical time-budgeting habits to break that exhausting cycle and transition seamlessly into balanced productivity.
                 </p>
+
+                <h2>The Computer Science of Human Time</h2>
+                <p>
+                    To truly master scheduling, we can look at how operating systems handle task overloads. When systems spend more time arranging tasks than executing them, they experience a breakdown. Watch this visual breakdown of how machines organize efficiency parameters:
+                </p>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/iDbdXTMnOmE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
 
                 <h2>The Strategic Framework</h2>
                 <p>
@@ -465,7 +492,7 @@
                     <div class="timer-title" style="text-align: left; margin-bottom: 1rem;">Frequently Asked Questions</div>
                     <div class="faq-item">
                         <div class="faq-q">Q: What happens if an unexpected assignment disrupts my blocked schedule?</div>
-                        <div class="faq-a">A: Treat blocks as modular blocks. If an emergency forces you to lose a 2-hour study block, immediately slide that block to an open visual window later in the week.</div>
+                        <div class="faq-a">A: Treat blocks as modular. As highlighted in computer science, dropping the necessity for a perfect sequence often yields faster, high-efficiency task resolution. Switch modules adaptively.</div>
                     </div>
                 </div>
 
