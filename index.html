@@ -10,19 +10,21 @@
     
     <style>
         :root {
-            --bg-color: #fcfbfa;       
+            /* CIT-U Maroon & Gold Inspired Palette */
+            --bg-color: #fffbf7;       /* Soft warm cream canvas */
             --card-bg: #ffffff;
-            --text-main: #334155;
-            --text-headings: #1e1b4b;  
-            --accent: #1d4ed8;         
-            --accent-light: #eff6ff;
-            --warning-border: #f59e0b;
+            --text-main: #475569;      /* Slate charcoal for comfortable reading */
+            --text-headings: #6b0c0c;  /* Deep Institutional Maroon */
+            --accent: #7a0000;         /* Bold Maroon for primary buttons/borders */
+            --accent-gold: #f5b002;    /* Vibrant Gold for highlights and accents */
+            --accent-light: #fdf2f2;   /* Very light maroon tint for definition blocks */
+            --warning-border: #d97706;
             --warning-bg: #fffbeb;
             --shortcut-border: #10b981;
             --shortcut-bg: #f0fdf4;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            --shadow-sm: 0 1px 3px rgba(107,12,12,0.04);
+            --shadow-md: 0 4px 6px -1px rgba(107,12,12,0.05), 0 2px 4px -1px rgba(107,12,12,0.02);
+            --shadow-lg: 0 10px 15px -3px rgba(107,12,12,0.06);
         }
 
         body {
@@ -75,7 +77,7 @@
         .author {
             font-family: 'Playfair Display', serif;
             font-style: italic;
-            color: #64748b;
+            color: #7e8b9b;
             font-size: 1.15rem;
             display: flex;
             align-items: center;
@@ -88,12 +90,12 @@
             display: inline-block;
             width: 20px;
             height: 1px;
-            background-color: #cbd5e1;
+            background-color: #e2e8f0;
         }
 
         .intro {
             font-size: 1.2rem;
-            color: #475569;
+            color: #334155;
             line-height: 1.8;
             margin-bottom: 2.5rem;
         }
@@ -104,7 +106,7 @@
             float: left;
             margin-right: 0.6rem;
             line-height: 0.85;
-            color: var(--accent);
+            color: var(--text-headings);
             font-weight: bold;
         }
 
@@ -114,6 +116,8 @@
             color: var(--text-headings);
             margin-top: 3.5rem;
             margin-bottom: 1rem;
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 12px;
         }
 
         h3 {
@@ -133,7 +137,7 @@
         }
 
         .definition-box strong {
-            color: #1d4ed8;
+            color: var(--text-headings);
             text-transform: uppercase;
             font-size: 0.85rem;
             letter-spacing: 0.05em;
@@ -151,16 +155,17 @@
 
         .example {
             background-color: #ffffff;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #f1f5f9;
             padding: 1.25rem 1.75rem;
             border-radius: 12px;
             margin: 1.5rem 0;
             font-size: 1rem;
             box-shadow: var(--shadow-sm);
+            border-left: 3px solid var(--accent-gold);
         }
 
         .example strong {
-            color: var(--accent);
+            color: var(--text-headings);
         }
 
         .video-container {
@@ -173,6 +178,7 @@
             border-radius: 16px;
             margin: 2.5rem 0;
             box-shadow: var(--shadow-md);
+            border: 2px solid #e2e8f0;
         }
 
         .video-container iframe {
@@ -182,12 +188,13 @@
 
         .timer-container {
             background: #ffffff;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #f1f5f9;
             border-radius: 16px;
             padding: 2rem;
             margin: 2.5rem 0;
             box-shadow: var(--shadow-md);
             text-align: center;
+            border-top: 4px solid var(--accent);
         }
 
         .timer-title {
@@ -208,20 +215,21 @@
         }
 
         .timer-btn {
-            background-color: var(--accent);
-            color: white;
+            background-color: var(--accent-gold);
+            color: #1e1b4b;
             border: none;
             padding: 0.6rem 2rem;
             font-size: 1rem;
-            font-weight: 600;
+            font-weight: 700;
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.2s;
+            box-shadow: 0 2px 4px rgba(245,176,2,0.2);
         }
 
         .timer-btn:hover {
-            background-color: #1d4ed8;
             transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(245,176,2,0.4);
         }
 
         .sidebar {
@@ -240,7 +248,7 @@
 
         .side-panel {
             background-color: #ffffff;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #f1f5f9;
             border-radius: 14px;
             padding: 1.5rem;
             box-shadow: var(--shadow-sm);
@@ -251,9 +259,9 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            color: var(--accent);
+            color: var(--text-headings);
             margin-bottom: 1rem;
-            border-bottom: 1px solid #f1f5f9;
+            border-bottom: 2px solid var(--accent-gold);
             padding-bottom: 0.5rem;
         }
 
@@ -268,8 +276,8 @@
         .flow-step:last-child { margin-bottom: 0; }
 
         .flow-num {
-            background-color: var(--accent-light);
-            color: var(--accent);
+            background-color: var(--accent-gold);
+            color: #1e1b4b;
             font-weight: 700;
             width: 24px;
             height: 24px;
@@ -315,7 +323,7 @@
             background-color: #ffffff;
             box-shadow: var(--shadow-md);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #f1f5f9;
         }
 
         .card:hover {
@@ -338,7 +346,7 @@
 
         .faq-section {
             background-color: #ffffff;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #f1f5f9;
             border-radius: 14px;
             padding: 1.5rem;
             margin: 2rem 0;
@@ -353,35 +361,36 @@
         .conclusion {
             font-size: 1.15rem;
             margin-top: 3rem;
-            border-top: 1px solid #e2e8f0;
+            border-top: 1px solid #f1f5f9;
             padding-top: 2rem;
             color: #475569;
         }
 
         .cta-section {
-            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+            background: linear-gradient(135deg, #4a0404 0%, #2e0202 100%);
             color: #ffffff;
             padding: 2.5rem;
             border-radius: 20px;
             margin-top: 4rem;
             box-shadow: var(--shadow-lg);
+            border-bottom: 4px solid var(--accent-gold);
         }
 
         .cta-section h3 {
             font-family: 'Playfair Display', serif;
-            color: #38bdf8;
+            color: var(--accent-gold);
             font-size: 1.6rem;
             margin-top: 0;
             margin-bottom: 0.5rem;
         }
 
-        .cta-section p { color: #94a3b8; margin-bottom: 1.5rem; }
+        .cta-section p { color: #cbd5e1; margin-bottom: 1.5rem; }
         .comment-box {
             width: 100%;
             padding: 1rem;
             border-radius: 10px;
-            border: 1px solid #4338ca;
-            background-color: rgba(30, 27, 75, 0.6);
+            border: 1px solid #7f1d1d;
+            background-color: rgba(255, 255, 255, 0.08);
             color: #ffffff;
             font-family: inherit;
             resize: vertical;
@@ -390,20 +399,23 @@
             font-size: 1rem;
         }
 
-        .comment-box:focus { outline: none; border-color: #38bdf8; }
+        .comment-box:focus { outline: none; border-color: var(--accent-gold); }
         .submit-btn {
-            background-color: #38bdf8;
-            color: #0f172a;
+            background-color: var(--accent-gold);
+            color: #1e1b4b;
             border: none;
             padding: 0.75rem 2rem;
-            font-weight: 600;
+            font-weight: 700;
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.2s;
             font-size: 0.95rem;
         }
 
-        .submit-btn:hover { background-color: #7dd3fc; transform: translateY(-1px); }
+        .submit-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
     </style>
 </head>
 <body>
@@ -559,7 +571,8 @@
             if (isRunning) {
                 clearInterval(timer);
                 button.textContent = 'Start Sprint';
-                button.style.backgroundColor = 'var(--accent)';
+                button.style.backgroundColor = 'var(--accent-gold)';
+                button.style.color = '#1e1b4b';
             } else {
                 timer = setInterval(() => {
                     if (timeLeft > 0) {
@@ -575,6 +588,7 @@
                 }, 1000);
                 button.textContent = 'Pause Sprint';
                 button.style.backgroundColor = '#dc2626';
+                button.style.color = '#ffffff';
             }
             isRunning = !isRunning;
         }
