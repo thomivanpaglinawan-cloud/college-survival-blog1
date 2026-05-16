@@ -20,9 +20,9 @@
             --warning-bg: #fffbeb;
             --shortcut-border: #10b981;
             --shortcut-bg: #f0fdf4;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.02);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
             --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
         }
 
         body {
@@ -36,7 +36,7 @@
         }
 
         .container {
-            max-width: 680px; /* Golden reading width for editorial articles */
+            max-width: 680px;
             margin: 0 auto;
             padding: 4rem 1.5rem;
         }
@@ -83,10 +83,8 @@
             color: #475569;
             line-height: 1.8;
             margin-bottom: 2.5rem;
-            font-weight: 400;
         }
 
-        /* Styling the first letter for an editorial look */
         .intro::first-letter {
             font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
@@ -110,9 +108,9 @@
             color: var(--text-headings);
             margin-top: 2.5rem;
             font-weight: 700;
-            letter-spacing: -0.01em;
         }
 
+        /* Definition and Steps */
         .definition-box {
             background-color: var(--accent-light);
             border-left: 4px solid var(--accent);
@@ -131,6 +129,14 @@
             margin-bottom: 0.25rem;
         }
 
+        .step-list {
+            padding-left: 1.25rem;
+        }
+
+        .step-list li {
+            margin-bottom: 1rem;
+        }
+
         .example {
             background-color: #ffffff;
             border: 1px solid #e2e8f0;
@@ -145,58 +151,52 @@
             color: var(--accent);
         }
 
-        /* --- VISUAL TIMELINE COMPONENT --- */
-        .visual-schedule {
+        /* --- INTERACTIVE POMODORO COMPONENT (Visual Aid Element) --- */
+        .timer-container {
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 16px;
-            padding: 1.5rem;
-            margin: 2rem 0;
+            padding: 2rem;
+            margin: 2.5rem 0;
             box-shadow: var(--shadow-md);
-        }
-        
-        .visual-schedule-title {
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #64748b;
-            margin-bottom: 1rem;
             text-align: center;
         }
 
-        .time-grid {
-            display: grid;
-            grid-template-columns: 80px 1fr;
-            gap: 10px;
-            align-items: center;
-            font-size: 0.9rem;
+        .timer-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #64748b;
+            margin-bottom: 0.5rem;
         }
 
-        .time-slot {
-            color: #94a3b8;
-            font-weight: 500;
+        .timer-display {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--text-headings);
+            margin: 0.5rem 0;
+            font-variant-numeric: tabular-nums;
         }
 
-        .task-bar {
-            padding: 0.75rem 1rem;
+        .timer-btn {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.6rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
             border-radius: 8px;
-            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
         }
 
-        .task-focus {
-            background-color: #dbeafe;
-            color: #1e40af;
-            border-left: 4px solid #2563eb;
+        .timer-btn:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-1px);
         }
 
-        .task-break {
-            background-color: #dcfce7;
-            color: #166534;
-            border-left: 4px solid #10b981;
-        }
-        /* --------------------------------- */
-
+        /* --- TIPS / WARNINGS / FAQS SECTION --- */
         .box-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -231,20 +231,38 @@
             font-weight: 700;
         }
 
-        .card-warning {
-            border-top: 4px solid var(--warning-border);
-        }
-        
-        .card-warning h4 {
-            color: #b45309;
+        .card-warning { border-top: 4px solid var(--warning-border); }
+        .card-warning h4 { color: #b45309; }
+
+        .card-shortcut { border-top: 4px solid var(--shortcut-border); }
+        .card-shortcut h4 { color: #047857; }
+
+        .faq-section {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-sm);
         }
 
-        .card-shortcut {
-            border-top: 4px solid var(--shortcut-border);
+        .faq-item {
+            margin-bottom: 1.25rem;
         }
 
-        .card-shortcut h4 {
-            color: #047857;
+        .faq-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            color: var(--text-headings);
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-a {
+            color: var(--text-main);
+            font-size: 0.95rem;
         }
 
         .conclusion {
@@ -290,7 +308,6 @@
             box-sizing: border-box;
             margin-bottom: 1.25rem;
             font-size: 1rem;
-            transition: border-color 0.2s;
         }
 
         .comment-box:focus {
@@ -326,69 +343,115 @@
 
         <article>
             <p class="intro">
-                Imagine staring at a blinking cursor at 2:00 AM, downing your third energy drink while trying to finish an assignment. This midnight panic is a direct result of unstructured university freedom clashing with heavy academic workloads. This guide equips you with concrete, technical time-budgeting habits to break that exhausting cycle.
+                Imagine staring at a blinking cursor at 2:00 AM, downing your third energy drink while trying to finish an assignment. This midnight panic is a direct result of unstructured university freedom clashing with heavy academic workloads. In higher education, structural autonomy leaves scheduling completely to the student. This guide equips you with concrete, technical time-budgeting habits to break that exhausting cycle and transition seamlessly into balanced productivity.
             </p>
 
             <h2>The Strategic Framework</h2>
             <p>
-                To reclaim control, you must stop treating time as an infinite resource and manage it like a strict budget. Implement these two steps:
+                To reclaim control, you must stop treating time as an infinite resource and manage it like a strict financial budget. Implement this step-by-step process to organize your workload:
             </p>
 
-            <h3>1. Execute Weekly Time Blocking</h3>
-            <p>Open your calendar and divide your day into distinct blocks assigned to specific tasks.</p>
-
-            <div class="definition-box">
-                <strong>Core Strategy</strong>
-                Time Blocking is a method where you assign explicit time slots to dedicated categories rather than working from a flat to-do list.
-            </div>
-
-            <div class="example">
-                <strong>Actionable Step:</strong> Block out Tuesday from 1:00 PM to 3:00 PM specifically for <em>"Review Chapter 4"</em> instead of just writing a generic note like <em>"Study"</em>.
-            </div>
-
-            <h3>2. Protect Your Focused Sprints</h3>
-            <p>Work in hyper-focused intervals of 25 minutes with zero digital distractions, followed by a 5-minute break.</p>
-
-            <div class="visual-schedule">
-                <div class="visual-schedule-title">Visualizing a Pomodoro Focus Sprint</div>
-                <div class="time-grid">
-                    <div class="time-slot">25 Mins</div>
-                    <div class="task-bar task-focus">Hyper-Focused Work (No Phone, No Tabs)</div>
+            <ol class="step-list">
+                <li>
+                    <strong>Execute Weekly Time Blocking</strong>
+                    <p>Open your digital calendar every Sunday evening and completely map out your upcoming week before reactive demands take over.</p>
                     
-                    <div class="time-slot">5 Mins</div>
-                    <div class="task-bar task-break">Guilt-Free Brain Break (Stretch, Hydrate)</div>
+                    <div class="definition-box">
+                        <strong>Technical Definition</strong>
+                        Time Blocking is a time-management methodology where you assign explicit, fixed operational windows to dedicated task categories rather than working haphazardly from a traditional flat to-do list.
+                    </div>
 
-                    <div class="time-slot">25 Mins</div>
-                    <div class="task-bar task-focus">Hyper-Focused Work (Session 2)</div>
-                </div>
+                    <div class="example">
+                        <strong>Actionable Example:</strong> Instead of writing a generic note like <em>"Study Electrical Engineering tonight,"</em> deliberately partition Tuesday from 1:00 PM to 3:00 PM specifically for <em>"Review Course Chapter 4 Summary Data."</em>
+                    </div>
+                </li>
+                
+                <li>
+                    <strong>Protect Your Focused Sprints</strong>
+                    <p>Human attention spans decay during extended work periods. Divide your deep-work sessions into precise, hyper-focused intervals with zero electronic or atmospheric distractions.</p>
+                </li>
+            </ol>
+
+            <div class="timer-container">
+                <div class="timer-title">Visual Aid: Integrated Pomodoro Focus Sprint Utility</div>
+                <div class="timer-display" id="timer-display">25:00</div>
+                <button class="timer-btn" id="timer-button" onclick="toggleTimer()">Start Sprint</button>
             </div>
 
+            <h2>Strategic Contingencies & Protocols</h2>
+            
             <div class="box-grid">
                 <div class="card card-warning">
-                    <h4>The Warning</h4>
-                    <p>A major mistake among students is relying on late-night cramming. Sleep deprivation severely impairs cognitive retention and causes academic burnout.</p>
+                    <h4>The Warning (Common Mistakes)</h4>
+                    <p>Relying on late-night cram sessions fundamentally compromises performance. Systemic sleep deprivation severely impairs critical cognitive retention, reduces analytic accuracy, and rapidly triggers long-term academic burnout.</p>
                 </div>
 
                 <div class="card card-shortcut">
-                    <h4>The Shortcut</h4>
-                    <p>Use the "Two-Minute Rule." If an administrative task takes less than two minutes—like emailing a professor—do it instantly to save mental bandwidth.</p>
+                    <h4>The Shortcut (Helpful Tips)</h4>
+                    <p>Utilize the operational "Two-Minute Rule." If an administrative task requires less than two minutes to complete—such as sending a formal absence notification or clarifying an assignment rule via email—execute it instantly to free up mental bandwidth.</p>
                 </div>
             </div>
 
+            <div class="faq-section">
+                <div class="timer-title" style="text-align: left; margin-bottom: 1rem;">Frequently Asked Questions</div>
+                <div class="faq-item">
+                    <div class="faq-q">Q: What happens if an unexpected assignment disrupts my blocked schedule?</div>
+                    <div class="faq-a">A: Treat blocks as modular blocks. If an emergency forces you to lose a 2-hour study block, immediately slide that block to an open visual window later in the week.</div>
+                </div>
+            </div>
+
+            <h2>Conclusion</h2>
             <p class="conclusion">
-                True time management establishes boundaries so you can excel academically while protecting your peace of mind. Shifting from reactive panic to intentional planning secures both your grades and your guilt-free rest.
+                True time management establishes firm boundaries so you can excel academically while actively protecting your peace of mind. Shifting from a framework of reactive panic to intentional, systematic planning protects both your grade point average and your guilt-free rest. Adopting these habits early is the strongest recommendation for building a sustainable professional workflow.
             </p>
         </article>
 
         <section class="cta-section">
             <h3>What is your biggest scheduling hurdle?</h3>
-            <p>Let me know your thoughts in the comments below!</p>
-            <form onsubmit="event.preventDefault(); alert('Thanks for sharing! Let\'s defeat the 3 AM cram session together.');">
-                <textarea class="comment-box" rows="4" placeholder="Share your experience here..."></textarea>
+            <p>Let me know your thoughts or share your personal time strategies in the comments below!</p>
+            <form onsubmit="event.preventDefault(); alert('Comment logged! Let\'s defeat the 3 AM cram session together.'); document.getElementById('comment-text').value='';">
+                <textarea id="comment-text" class="comment-box" rows="4" placeholder="Type your observation or strategy here..."></textarea>
                 <button type="submit" class="submit-btn">Post Comment</button>
             </form>
         </section>
     </div>
 
+    <script>
+        let timer;
+        let isRunning = false;
+        let timeLeft = 25 * 60;
+
+        function updateDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('timer-display').textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        function toggleTimer() {
+            const button = document.getElementById('timer-button');
+            if (isRunning) {
+                clearInterval(timer);
+                button.textContent = 'Start Sprint';
+                button.style.backgroundColor = 'var(--accent)';
+            } else {
+                timer = setInterval(() => {
+                    if (timeLeft > 0) {
+                        timeLeft--;
+                        updateDisplay();
+                    } else {
+                        clearInterval(timer);
+                        alert('Focus Sprint Complete! Take a well-deserved 5-minute break.');
+                        timeLeft = 25 * 60;
+                        updateDisplay();
+                        button.textContent = 'Start Sprint';
+                    }
+                }, 1000);
+                button.textContent = 'Pause Sprint';
+                button.style.backgroundColor = '#dc2626'; // Alert Red
+            }
+            isRunning = !isRunning;
+        }
+    </script>
 </body>
 </html>
