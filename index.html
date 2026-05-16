@@ -127,7 +127,6 @@
             font-weight: 700;
         }
 
-        /* --- ADDED ARTICLE IMAGE STYLING --- */
         .article-img {
             width: 100%;
             height: auto;
@@ -445,7 +444,7 @@
                     Imagine staring at a blank screen at 2:00 AM, drinking your third energy drink while trying to finish an assignment. This midnight panic happens because college gives you a ton of free time, but also a massive workload. Suddenly, no one is making you study. This guide will give you simple, practical habits to break that stressful cycle so you can stay on top of your classes without losing your mind.
                 </p>
 
-                <img class="article-img" src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=1000" alt="Calendar and Planning Elements">
+                <img class="article-img" src="https://picsum.photos/id/1062/1000/600" alt="Calendar and Planning Elements">
 
                 <h2>How Computers Can Help Us Manage Time</h2>
                 <p>
@@ -471,7 +470,7 @@
                             Instead of working from a long, messy to-do list, time blocking means you carve out specific, fixed chunks of your day for specific tasks.
                         </div>
 
-                        <img class="article-img"https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=1000&auto=format&fit=crop&q=80&w=1000" alt="Productivity checklist and blocking execution">
+                        <img class="article-img" src="https://picsum.photos/id/20/1000/600" alt="Productivity checklist and blocking execution">
 
                         <div class="example">
                             <strong>Real Example:</strong> Instead of telling yourself, <em>"I'll study tonight,"</em> put a block on your calendar for Tuesday from 1:00 PM to 3:00 PM that says <em>"Read Chapter 4 summary."</em>
@@ -486,130 +485,4 @@
 
                 <div class="timer-container">
                     <div class="timer-title">Give it a try: Start a 25-Minute Focus Sprint</div>
-                    <div class="timer-display" id="timer-display">25:00</div>
-                    <button class="timer-btn" id="timer-button" onclick="toggleTimer()">Start Sprint</button>
-                </div>
-
-                <h2>Mistakes to Avoid & Handy Shortcuts</h2>
-                
-                <div class="box-grid">
-                    <div class="card card-warning">
-                        <h4>The Warning (Common Mistake)</h4>
-                        <p>Relying on late-night cramming completely destroys your brainpower. Missing sleep makes it harder to remember what you studied, slows down your thinking, and quickly leads to total burnout.</p>
-                    </div>
-
-                    <div class="card card-shortcut">
-                        <h4>The Shortcut (Quick Tip)</h4>
-                        <p>Use the "Two-Minute Rule." If a small task takes less than two minutes to finish—like emailing a professor to ask a quick question or sending an update—do it immediately so it doesn't clutter your mind.</p>
-                    </div>
-                </div>
-
-                <img class="article-img" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&q=80&w=1000" alt="Focused student working smoothly without stress">
-
-                <div class="faq-section">
-                    <div class="timer-title" style="text-align: left; margin-bottom: 1rem;">Common Questions</div>
-                    <div class="faq-item">
-                        <div class="faq-q">Q: What if an unexpected assignment ruins my plan?</div>
-                        <div class="faq-a">A: Just move the blocks around. Like the video mentions, computers don't always need to do things in a perfect order to get them done. Be flexible and slide your study block to an open spot later in the week.</div>
-                    </div>
-                </div>
-
-                <h2>Conclusion</h2>
-                <p class="conclusion">
-                    Good time management is all about setting boundaries. It lets you get great grades while still keeping your peace of mind. Shifting from last-minute panic to basic, intentional planning protects your GPA and ensures you get guilt-free sleep at night. Starting these habits now is the best way to set yourself up for success.
-                </p>
-            </article>
-
-            <section class="cta-section">
-                <h3>What is your biggest scheduling hurdle?</h3>
-                <p>Let me know your thoughts or share your own time-saving tips in the comments below!</p>
-                <form onsubmit="event.preventDefault(); alert('Comment posted! Let\'s defeat the 3 AM cram session together.'); document.getElementById('comment-text').value='';">
-                    <textarea id="comment-text" class="comment-box" rows="4" placeholder="Type your comment here..."></textarea>
-                    <button type="submit" class="submit-btn">Post Comment</button>
-                </form>
-            </section>
-        </main>
-
-        <aside class="sidebar">
-            
-            <div class="side-panel">
-                <div class="side-panel-title">The Pomodoro Rule</div>
-                <div class="flow-step">
-                    <div class="flow-num">1</div>
-                    <div>Pick one specific task to do.</div>
-                </div>
-                <div class="flow-step">
-                    <div class="flow-num">2</div>
-                    <div>Set the timer for 25 minutes.</div>
-                </div>
-                <div class="flow-step">
-                    <div class="flow-num">3</div>
-                    <div>Work with zero phone distractions.</div>
-                </div>
-                <div class="flow-step">
-                    <div class="flow-num">4</div>
-                    <div>Take a mandatory 5-minute break.</div>
-                </div>
-            </div>
-
-            <div class="side-panel">
-                <div class="side-panel-title">Sunday Prep Checklist</div>
-                <label class="side-checkbox">
-                    <input type="checkbox"> <span>Check syllabus for due dates</span>
-                </label>
-                <label class="side-checkbox">
-                    <input type="checkbox"> <span>Mark down your class hours</span>
-                </label>
-                <label class="side-checkbox">
-                    <input type="checkbox"> <span>Block out specific study times</span>
-                </label>
-                <label class="side-checkbox">
-                    <input type="checkbox"> <span>Plan for 8 hours of sleep</span>
-                </label>
-            </div>
-
-        </aside>
-
-    </div>
-
-    <script>
-        let timer;
-        let isRunning = false;
-        let timeLeft = 25 * 60;
-
-        function updateDisplay() {
-            const minutes = Math.floor(timeLeft / 60);
-            const seconds = timeLeft % 60;
-            document.getElementById('timer-display').textContent = 
-                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-        }
-
-        function toggleTimer() {
-            const button = document.getElementById('timer-button');
-            if (isRunning) {
-                clearInterval(timer);
-                button.textContent = 'Start Sprint';
-                button.style.backgroundColor = 'var(--accent-gold)';
-                button.style.color = '#1e1b4b';
-            } else {
-                timer = setInterval(() => {
-                    if (timeLeft > 0) {
-                        timeLeft--;
-                        updateDisplay();
-                    } else {
-                        clearInterval(timer);
-                        alert('Focus Sprint Complete! Take a well-deserved 5-minute break.');
-                        timeLeft = 25 * 60;
-                        updateDisplay();
-                        button.textContent = 'Start Sprint';
-                    }
-                }, 1000);
-                button.textContent = 'Pause Sprint';
-                button.style.backgroundColor = '#dc2626';
-                button.style.color = '#ffffff';
-            }
-            isRunning = !isRunning;
-        }
-    </script>
-</body>
-</html>
+                    <div class="timer-display" id="timer-display">25:
