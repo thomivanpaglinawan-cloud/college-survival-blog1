@@ -10,12 +10,11 @@
     
     <style>
         :root {
-            /* Cinematic, Academic Palette */
-            --bg-color: #fcfbfa;       /* Off-white canvas */
+            --bg-color: #fcfbfa;       
             --card-bg: #ffffff;
             --text-main: #334155;
-            --text-headings: #1e1b4b;  /* Deep Midnight Ink */
-            --accent: #1d4ed8;         /* High-end Technical Blue */
+            --text-headings: #1e1b4b;  
+            --accent: #1d4ed8;         
             --accent-light: #eff6ff;
             --warning-border: #f59e0b;
             --warning-bg: #fffbeb;
@@ -36,7 +35,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Responsive Wrapper Layout */
         .page-wrapper {
             max-width: 1140px;
             margin: 0 auto;
@@ -53,7 +51,7 @@
         }
 
         .main-content {
-            max-width: 680px; /* Golden reading width */
+            max-width: 680px; 
         }
 
         header {
@@ -125,7 +123,6 @@
             font-weight: 700;
         }
 
-        /* Definition and Steps */
         .definition-box {
             background-color: var(--accent-light);
             border-left: 4px solid var(--accent);
@@ -166,10 +163,9 @@
             color: var(--accent);
         }
 
-        /* --- RESPONSIVE VIDEO WRAPPER --- */
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%; 
             height: 0;
             overflow: hidden;
             max-width: 100%;
@@ -181,14 +177,9 @@
 
         .video-container iframe {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
+            top: 0; left: 0; width: 100%; height: 100%; border: 0;
         }
 
-        /* --- INTERACTIVE POMODORO COMPONENT --- */
         .timer-container {
             background: #ffffff;
             border: 1px solid #e2e8f0;
@@ -233,7 +224,6 @@
             transform: translateY(-1px);
         }
 
-        /* --- VISUAL SIDEBAR --- */
         .sidebar {
             display: flex;
             flex-direction: column;
@@ -306,7 +296,6 @@
             cursor: pointer;
         }
 
-        /* --- TIPS / WARNINGS / FAQS --- */
         .box-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -369,7 +358,6 @@
             color: #475569;
         }
 
-        /* CTA / Comments Section */
         .cta-section {
             background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
             color: #ffffff;
@@ -430,83 +418,83 @@
 
             <article>
                 <p class="intro">
-                    Imagine staring at a blinking cursor at 2:00 AM, downing your third energy drink while trying to finish an assignment. This midnight panic is a direct result of unstructured university freedom clashing with heavy academic workloads. In higher education, structural autonomy leaves scheduling completely to the student. This guide equips you with concrete, technical time-budgeting habits to break that exhausting cycle and transition seamlessly into balanced productivity.
+                    Imagine staring at a blank screen at 2:00 AM, drinking your third energy drink while trying to finish an assignment. This midnight panic happens because college gives you a ton of free time, but also a massive workload. Suddenly, no one is making you study. This guide will give you simple, practical habits to break that stressful cycle so you can stay on top of your classes without losing your mind.
                 </p>
 
-                <h2>The Computer Science of Human Time</h2>
+                <h2>How Computers Can Help Us Manage Time</h2>
                 <p>
-                    To truly master scheduling, we can look at how operating systems handle task overloads. When systems spend more time arranging tasks than executing them, they experience a breakdown. Watch this visual breakdown of how machines organize efficiency parameters:
+                    To figure out the best way to handle a busy schedule, we can actually learn a lot from how computers work. When a computer spends more time organizing its tasks than actually doing them, it crashes. This short video explains exactly how machines sort their work efficiently, and how we can use those same rules in real life:
                 </p>
 
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/iDbdXTMnOmE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
-                <h2>The Strategic Framework</h2>
+                <h2>The 2-Step Action Plan</h2>
                 <p>
-                    To reclaim control, you must stop treating time as an infinite resource and manage it like a strict financial budget. Implement this step-by-step process to organize your workload:
+                    To take back control of your days, you have to stop thinking of time as endless. Instead, treat it like a strict cash budget. Follow these two simple steps:
                 </p>
 
                 <ol class="step-list">
                     <li>
-                        <strong>Execute Weekly Time Blocking</strong>
-                        <p>Open your digital calendar every Sunday evening and completely map out your upcoming week before reactive demands take over.</p>
+                        <strong>Use Weekly Time Blocking</strong>
+                        <p>Every Sunday evening, open your calendar app and map out your entire week before things get hectic.</p>
                         
                         <div class="definition-box">
-                            <strong>Technical Definition</strong>
-                            Time Blocking is a time-management methodology where you assign explicit, fixed operational windows to dedicated task categories rather than working haphazardly from a traditional flat to-do list.
+                            <strong>What is Time Blocking?</strong>
+                            Instead of working from a long, messy to-do list, time blocking means you carve out specific, fixed chunks of your day for specific tasks.
                         </div>
 
                         <div class="example">
-                            <strong>Actionable Example:</strong> Instead of writing a generic note like <em>"Study Electrical Engineering tonight,"</em> deliberately partition Tuesday from 1:00 PM to 3:00 PM specifically for <em>"Review Course Chapter 4 Summary Data."</em>
+                            <strong>Real Example:</strong> Instead of telling yourself, <em>"I'll study tonight,"</em> put a block on your calendar for Tuesday from 1:00 PM to 3:00 PM that says <em>"Read Chapter 4 summary."</em>
                         </div>
                     </li>
                     
                     <li>
-                        <strong>Protect Your Focused Sprints</strong>
-                        <p>Human attention spans decay during extended work periods. Divide your deep-work sessions into precise, hyper-focused intervals with zero electronic or atmospheric distractions.</p>
+                        <strong>Protect Your Focus Sprints</strong>
+                        <p>No one can focus perfectly for hours straight. Break your study time into short, intense bursts where your phone is completely put away and extra browser tabs are closed.</p>
                     </li>
                 </ol>
 
                 <div class="timer-container">
-                    <div class="timer-title">Visual Aid: Integrated Pomodoro Focus Sprint Utility</div>
+                    <div class="timer-title">Give it a try: Start a 25-Minute Focus Sprint</div>
                     <div class="timer-display" id="timer-display">25:00</div>
                     <button class="timer-btn" id="timer-button" onclick="toggleTimer()">Start Sprint</button>
                 </div>
 
-                <h2>Strategic Contingencies & Protocols</h2>
+                <h2>Mistakes to Avoid & Handy Shortcuts</h2>
                 
                 <div class="box-grid">
                     <div class="card card-warning">
-                        <h4>The Warning (Common Mistakes)</h4>
-                        <p>Relying on late-night cram sessions fundamentally compromises performance. Systemic sleep deprivation severely impairs critical cognitive retention, reduces analytic accuracy, and rapidly triggers long-term academic burnout.</p>
+                        <h4>The Warning (Common Mistake)</h4>
+                        <p>Relying on late-night cramming completely destroys your brainpower. Missing sleep makes it harder to remember what you studied, slows down your thinking, and quickly leads to total burnout.</p>
                     </div>
 
                     <div class="card card-shortcut">
-                        <h4>The Shortcut (Helpful Tips)</h4>
-                        <p>Utilize the operational "Two-Minute Rule." If an administrative task requires less than two minutes to complete—such as sending a formal absence notification or clarifying an assignment rule via email—execute it instantly to free up mental bandwidth.</p>
+                        <h4>The Shortcut (Quick Tip)</h4>
+                        <p>Use the "Two-Minute Rule." If a small task takes less than two minutes to finish—like emailing a professor to ask a quick question or sending an update—do it immediately so it doesn't clutter your mind.</p>
                     </div>
                 </div>
 
                 <div class="faq-section">
-                    <div class="timer-title" style="text-align: left; margin-bottom: 1rem;">Frequently Asked Questions</div>
+                    <div class="timer-title" style="text-align: left; margin-bottom: 1rem;">Common Questions</div>
                     <div class="faq-item">
-                        <div class="faq-q">Q: What happens if an unexpected assignment disrupts my blocked schedule?</div>
-                        <div class="faq-a">A: Treat blocks as modular. As highlighted in computer science, dropping the necessity for a perfect sequence often yields faster, high-efficiency task resolution. Switch modules adaptively.</div>
+                        <div class="faq-q">Q: What if an unexpected assignment ruins my plan?</div>
+                        <div class="faq-a">A: Just move the blocks around. Like the video mentions, computers don't always need to do things in a perfect order to get them done. Be flexible and slide your study block to an open spot later in the week.</div>
                     </div>
                 </div>
 
                 <h2>Conclusion</h2>
                 <p class="conclusion">
-                    True time management establishes firm boundaries so you can excel academically while actively protecting your peace of mind. Shifting from a framework of reactive panic to intentional, systematic planning protects both your grade point average and your guilt-free rest. Adopting these habits early is the strongest recommendation for building a sustainable professional workflow.
+                    Good time management is all about setting boundaries. It lets you get great grades while still keeping your peace of mind. Shifting from last-minute panic to basic, intentional planning protects your GPA and ensures you get guilt-free sleep at night. Starting these habits now is the best way to set yourself up for success.
                 </p>
             </article>
 
             <section class="cta-section">
                 <h3>What is your biggest scheduling hurdle?</h3>
-                <p>Let me know your thoughts or share your personal time strategies in the comments below!</p>
-                <form onsubmit="event.preventDefault(); alert('Comment logged! Let\'s defeat the 3 AM cram session together.'); document.getElementById('comment-text').value='';">
-                    <textarea id="comment-text" class="comment-box" rows="4" placeholder="Type your observation or strategy here..."></textarea>
+                <p>Let me know your thoughts or share your own time-saving tips in the comments below!</p>
+                <form onsubmit="event.preventDefault(); alert('Comment posted! Let\'s beat the 3 AM cram session together.'); document.getElementById('comment-text').value='';">
+                    <textarea id="comment-text" class="comment-box" rows="4" placeholder="Type your comment here..."></textarea>
                     <button type="submit" class="submit-btn">Post Comment</button>
                 </form>
             </section>
@@ -515,38 +503,38 @@
         <aside class="sidebar">
             
             <div class="side-panel">
-                <div class="side-panel-title">Pomodoro Protocol</div>
+                <div class="side-panel-title">The Pomodoro Rule</div>
                 <div class="flow-step">
                     <div class="flow-num">1</div>
-                    <div>Select a single technical task.</div>
+                    <div>Pick one specific task to do.</div>
                 </div>
                 <div class="flow-step">
                     <div class="flow-num">2</div>
-                    <div>Set interactive timer to 25 minutes.</div>
+                    <div>Set the timer for 25 minutes.</div>
                 </div>
                 <div class="flow-step">
                     <div class="flow-num">3</div>
-                    <div>Work with zero digital distraction tabs.</div>
+                    <div>Work with zero phone distractions.</div>
                 </div>
                 <div class="flow-step">
                     <div class="flow-num">4</div>
-                    <div>Take a mandatory 5-minute cognitive rest.</div>
+                    <div>Take a mandatory 5-minute break.</div>
                 </div>
             </div>
 
             <div class="side-panel">
-                <div class="side-panel-title">Sunday Review Setup</div>
+                <div class="side-panel-title">Sunday Prep Checklist</div>
                 <label class="side-checkbox">
-                    <input type="checkbox"> <span>Audit syllabus due dates</span>
+                    <input type="checkbox"> <span>Check syllabus for due dates</span>
                 </label>
                 <label class="side-checkbox">
-                    <input type="checkbox"> <span>Lock in lectures/lab hours</span>
+                    <input type="checkbox"> <span>Mark down your class hours</span>
                 </label>
                 <label class="side-checkbox">
-                    <input type="checkbox"> <span>Block specific study windows</span>
+                    <input type="checkbox"> <span>Block out specific study times</span>
                 </label>
                 <label class="side-checkbox">
-                    <input type="checkbox"> <span>Assign 8 hours minimum sleep</span>
+                    <input type="checkbox"> <span>Plan for 8 hours of sleep</span>
                 </label>
             </div>
 
